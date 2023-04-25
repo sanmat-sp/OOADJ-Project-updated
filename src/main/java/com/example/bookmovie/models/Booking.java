@@ -27,66 +27,79 @@ public class Booking {
     private Integer seatNo;
     @Column(name="price")
     private Double price;
+    @Column(name="userEmail")
+    private String userEmail;
     
     public Booking() {
     }
 
-    public Booking(Integer bookingId, Integer showId, Date date, String colNo, Integer seatNo, Double price) {
+    public Booking(Integer bookingId, Integer showId, Date date, String colNo, Integer seatNo, Double price,
+            String userEmail) {
         this.bookingId = bookingId;
         this.showId = showId;
         this.date = date;
         this.colNo = colNo;
         this.seatNo = seatNo;
         this.price = price;
+        this.userEmail = userEmail;
     }
 
     public Integer getBookingId() {
         return bookingId;
     }
 
-    public Integer getShowId() {
-        return showId;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public String getColNo() {
-        return colNo;
-    }
-
-    public Integer getSeatNo() {
-        return seatNo;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
     public void setBookingId(Integer bookingId) {
         this.bookingId = bookingId;
+    }
+
+    public Integer getShowId() {
+        return showId;
     }
 
     public void setShowId(Integer showId) {
         this.showId = showId;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getColNo() {
+        return colNo;
     }
 
     public void setColNo(String colNo) {
         this.colNo = colNo;
     }
 
+    public Integer getSeatNo() {
+        return seatNo;
+    }
+
     public void setSeatNo(Integer seatNo) {
         this.seatNo = seatNo;
+    }
+
+    public Double getPrice() {
+        return price;
     }
 
     public void setPrice(Double price) {
         this.price = price;
     }
 
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    
     
 }
