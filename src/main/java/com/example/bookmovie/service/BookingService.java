@@ -9,4 +9,5 @@ public interface BookingService {
     public Booking addBooking(Booking Booking);
     public Booking getBookingById(Integer bookingId);
     public boolean deleteBooking(Integer bookingId) ;
+    public List<Booking> getBookingByEmailId(String userEmail);
 }

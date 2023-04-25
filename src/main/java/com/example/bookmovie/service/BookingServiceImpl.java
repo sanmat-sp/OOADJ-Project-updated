@@ -65,4 +65,10 @@ public class BookingServiceImpl implements BookingService {
 
         return false;
     }
+
+    @Override
+    public List<Booking> getBookingByEmailId(String userEmail) {
+        List<Booking> result = bookingRepository.findBookingByEmailId(userEmail);
+        return result;
+    }
 }

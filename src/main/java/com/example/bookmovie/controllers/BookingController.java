@@ -47,4 +47,9 @@ public class BookingController {
 
         return "redirect:/bookings";
     }
+
+    @GetMapping("/bookings/userEmail/{userEmail}")
+    public List<Booking> getByEmailId(@PathVariable String userEmail){
+        return bookingService.getBookingByEmailId(userEmail);
+    }
 }
