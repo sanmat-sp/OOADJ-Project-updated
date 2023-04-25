@@ -36,7 +36,7 @@ public class ShowController {
         return showService.getShowById(showId);
     }
 
-    @GetMapping("/shows/movie/{id}")
+    @GetMapping("/shows/movie/{movieId}")
     public List<Show> getByMovieId(@PathVariable Integer movieId){
         return showService.getShowByMovieId(movieId);
     }

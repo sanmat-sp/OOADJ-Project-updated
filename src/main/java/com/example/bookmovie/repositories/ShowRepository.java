@@ -10,7 +10,7 @@ import com.example.bookmovie.models.Show;
 
 public interface ShowRepository extends JpaRepository<Show, Integer>{
     
-    @Query("SELECT S FROM Show S WHERE S.id = ?1")
+    @Query("SELECT S FROM Show S WHERE S.movieId = ?1")
     List<Show> findByMovieId(Integer id);
 
     @Query("SELECT S FROM Show S WHERE S.theatreId = ?1")

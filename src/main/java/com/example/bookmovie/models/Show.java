@@ -17,7 +17,7 @@ public class Show {
     @Column(name = "theatreId")
     Integer theatreId;
     @Column(name = "id")
-    Integer id;
+    Integer movieId;
     @Column(name = "date")
     String date;
     @Column(name = "startTime")
@@ -34,11 +34,11 @@ public class Show {
 
     
 
-    public Show(Integer showId, Integer theatreId, Integer id, String date, String startTime, String endTime,
+    public Show(Integer showId, Integer theatreId, Integer movieId, String date, String startTime, String endTime,
             Integer seatMatrixID) {
         this.showId = showId;
         this.theatreId = theatreId;
-        this.id = id;
+        this.movieId = movieId;
         this.date = date;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -55,7 +55,7 @@ public class Show {
     }
 
     public Integer getMovieId() {
-        return id;
+        return movieId;
     }
 
     public String getDate() {
@@ -78,8 +78,8 @@ public class Show {
         this.theatreId = theatreId;
     }
 
-    public void setMovieId(Integer id) {
-        this.id = id;
+    public void setMovieId(Integer movieId) {
+        this.movieId = movieId;
     }
 
     public void setDate(String date) {
